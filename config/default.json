@@ -1,0 +1,11 @@
+{
+  "parent_max_tokens": 512,
+  "child_max_tokens": 120,
+  "child_overlap_tokens": 20,
+  "dense_top_k": 50,
+  "sparse_top_k": 50,
+  "rerank_top_n": 5,
+  "rrf_k": 60,
+  "context_token_budget": 1500,
+  "semantic_chunking": true
+}
