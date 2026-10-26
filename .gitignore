@@ -6,6 +6,4 @@ __pycache__/
 .env
 .cache/
 chroma_db/
-reports/*.json
-!reports/.gitkeep
 *.egg-info/

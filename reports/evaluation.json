@@ -1,0 +1,655 @@
+{
+  "metrics": {
+    "query_count": 6,
+    "hit_rate_at_k": 1.0,
+    "mrr_at_k": 1.0,
+    "ndcg_at_k": 1.0,
+    "k": 5,
+    "latency_ms": {
+      "mean": 122.062,
+      "p50": 108.853,
+      "p95": 208.457,
+      "target_ms": 800,
+      "target_met_in_this_run": true,
+      "note": "Includes retrieval and reranking, excludes initial model loading and document ingestion."
+    }
+  },
+  "queries": [
+    {
+      "query_id": "latency-sla",
+      "query": "What is the guaranteed query latency SLA for Project Titan?",
+      "tags": [
+        "semantic",
+        "retrieval"
+      ],
+      "relevant_sources": [
+        "titan_vector_architecture.md"
+      ],
+      "ranked_sources": [
+        "titan_vector_architecture.md",
+        "titan_client_implementation.md",
+        "titan_reranking_spec.md",
+        "titan_security_whitepaper.md"
+      ],
+      "ranked_parent_ids": [
+        "titan_vector_architecture.md::parent-0000",
+        "titan_client_implementation.md::parent-0000",
+        "titan_reranking_spec.md::parent-0000",
+        "titan_security_whitepaper.md::parent-0000"
+      ],
+      "hit_rate_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_latency_ms": 208.457,
+      "context_token_count": 748,
+      "context_token_budget": 1500,
+      "context_sources": [
+        "titan_vector_architecture.md",
+        "titan_client_implementation.md",
+        "titan_reranking_spec.md",
+        "titan_security_whitepaper.md",
+        "titan_security_whitepaper.md"
+      ],
+      "omitted_parent_ids": [],
+      "retrieval_stats": {
+        "latency_ms": 208.386,
+        "dense_candidates": 20,
+        "sparse_candidates": 20,
+        "fused_child_candidates": 20,
+        "fused_unique_children_before_cap": 20,
+        "metadata_filter": null,
+        "unique_parent_candidates": 17,
+        "returned_parents": 5
+      },
+      "reranked": [
+        {
+          "parent_id": "titan_vector_architecture.md::parent-0000",
+          "source": "titan_vector_architecture.md",
+          "score": 2.6261894702911377,
+          "rrf_score": 0.06353209026563073,
+          "matched_child_ids": [
+            "titan_vector_architecture.md::parent-0000::child-0000",
+            "titan_vector_architecture.md::parent-0000::child-0001"
+          ]
+        },
+        {
+          "parent_id": "titan_client_implementation.md::parent-0000",
+          "source": "titan_client_implementation.md",
+          "score": -0.2282029539346695,
+          "rrf_score": 0.03252247488101534,
+          "matched_child_ids": [
+            "titan_client_implementation.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_reranking_spec.md::parent-0000",
+          "source": "titan_reranking_spec.md",
+          "score": -1.7810934782028198,
+          "rrf_score": 0.06049365345139993,
+          "matched_child_ids": [
+            "titan_reranking_spec.md::parent-0000::child-0000",
+            "titan_reranking_spec.md::parent-0000::child-0001"
+          ]
+        },
+        {
+          "parent_id": "titan_security_whitepaper.md::parent-0000",
+          "source": "titan_security_whitepaper.md",
+          "score": -2.4596362113952637,
+          "rrf_score": 0.03149801587301587,
+          "matched_child_ids": [
+            "titan_security_whitepaper.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_security_whitepaper.md::parent-0003",
+          "source": "titan_security_whitepaper.md",
+          "score": -10.999255180358887,
+          "rrf_score": 0.027212143650499815,
+          "matched_child_ids": [
+            "titan_security_whitepaper.md::parent-0003::child-0000"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "reranking-method",
+      "query": "How does the two-stage reranking pipeline improve relevance and reduce hallucinations?",
+      "tags": [
+        "semantic",
+        "reranking"
+      ],
+      "relevant_sources": [
+        "titan_reranking_spec.md"
+      ],
+      "ranked_sources": [
+        "titan_reranking_spec.md",
+        "structural_code_sample.md",
+        "titan_vector_architecture.md",
+        "platform_parts_catalog.md"
+      ],
+      "ranked_parent_ids": [
+        "titan_reranking_spec.md::parent-0000",
+        "structural_code_sample.md::parent-0002",
+        "titan_vector_architecture.md::parent-0000",
+        "platform_parts_catalog.md::parent-0001"
+      ],
+      "hit_rate_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_latency_ms": 114.082,
+      "context_token_count": 1186,
+      "context_token_budget": 1500,
+      "context_sources": [
+        "titan_reranking_spec.md",
+        "structural_code_sample.md",
+        "structural_code_sample.md",
+        "titan_vector_architecture.md",
+        "platform_parts_catalog.md"
+      ],
+      "omitted_parent_ids": [],
+      "retrieval_stats": {
+        "latency_ms": 114.018,
+        "dense_candidates": 20,
+        "sparse_candidates": 20,
+        "fused_child_candidates": 20,
+        "fused_unique_children_before_cap": 20,
+        "metadata_filter": null,
+        "unique_parent_candidates": 17,
+        "returned_parents": 5
+      },
+      "reranked": [
+        {
+          "parent_id": "titan_reranking_spec.md::parent-0000",
+          "source": "titan_reranking_spec.md",
+          "score": 2.423238515853882,
+          "rrf_score": 0.06504494976203068,
+          "matched_child_ids": [
+            "titan_reranking_spec.md::parent-0000::child-0001",
+            "titan_reranking_spec.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "structural_code_sample.md::parent-0002",
+          "source": "structural_code_sample.md",
+          "score": -9.690794944763184,
+          "rrf_score": 0.029236022193768675,
+          "matched_child_ids": [
+            "structural_code_sample.md::parent-0002::child-0000"
+          ]
+        },
+        {
+          "parent_id": "structural_code_sample.md::parent-0001",
+          "source": "structural_code_sample.md",
+          "score": -10.309988021850586,
+          "rrf_score": 0.03055037313432836,
+          "matched_child_ids": [
+            "structural_code_sample.md::parent-0001::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_vector_architecture.md::parent-0000",
+          "source": "titan_vector_architecture.md",
+          "score": -10.65701675415039,
+          "rrf_score": 0.06158851361057244,
+          "matched_child_ids": [
+            "titan_vector_architecture.md::parent-0000::child-0001",
+            "titan_vector_architecture.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "platform_parts_catalog.md::parent-0001",
+          "source": "platform_parts_catalog.md",
+          "score": -10.941713333129883,
+          "rrf_score": 0.02976190476190476,
+          "matched_child_ids": [
+            "platform_parts_catalog.md::parent-0001::child-0000"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "security-protocols",
+      "query": "Describe the encryption and HSM authentication protocols used by Project Titan.",
+      "tags": [
+        "security",
+        "semantic"
+      ],
+      "relevant_sources": [
+        "titan_security_whitepaper.md"
+      ],
+      "ranked_sources": [
+        "titan_security_whitepaper.md",
+        "titan_client_implementation.md",
+        "titan_vector_architecture.md",
+        "titan_reranking_spec.md"
+      ],
+      "ranked_parent_ids": [
+        "titan_security_whitepaper.md::parent-0002",
+        "titan_client_implementation.md::parent-0000",
+        "titan_vector_architecture.md::parent-0000",
+        "titan_reranking_spec.md::parent-0000"
+      ],
+      "hit_rate_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_latency_ms": 108.893,
+      "context_token_count": 752,
+      "context_token_budget": 1500,
+      "context_sources": [
+        "titan_security_whitepaper.md",
+        "titan_security_whitepaper.md",
+        "titan_client_implementation.md",
+        "titan_vector_architecture.md",
+        "titan_reranking_spec.md"
+      ],
+      "omitted_parent_ids": [],
+      "retrieval_stats": {
+        "latency_ms": 108.834,
+        "dense_candidates": 20,
+        "sparse_candidates": 20,
+        "fused_child_candidates": 20,
+        "fused_unique_children_before_cap": 20,
+        "metadata_filter": null,
+        "unique_parent_candidates": 17,
+        "returned_parents": 5
+      },
+      "reranked": [
+        {
+          "parent_id": "titan_security_whitepaper.md::parent-0002",
+          "source": "titan_security_whitepaper.md",
+          "score": 1.2378003597259521,
+          "rrf_score": 0.031544957774465976,
+          "matched_child_ids": [
+            "titan_security_whitepaper.md::parent-0002::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_security_whitepaper.md::parent-0000",
+          "source": "titan_security_whitepaper.md",
+          "score": 0.8397303819656372,
+          "rrf_score": 0.0315136476426799,
+          "matched_child_ids": [
+            "titan_security_whitepaper.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_client_implementation.md::parent-0000",
+          "source": "titan_client_implementation.md",
+          "score": -0.9445849061012268,
+          "rrf_score": 0.03125,
+          "matched_child_ids": [
+            "titan_client_implementation.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_vector_architecture.md::parent-0000",
+          "source": "titan_vector_architecture.md",
+          "score": -1.3495187759399414,
+          "rrf_score": 0.05890906797550842,
+          "matched_child_ids": [
+            "titan_vector_architecture.md::parent-0000::child-0000",
+            "titan_vector_architecture.md::parent-0000::child-0001"
+          ]
+        },
+        {
+          "parent_id": "titan_reranking_spec.md::parent-0000",
+          "source": "titan_reranking_spec.md",
+          "score": -1.554057002067566,
+          "rrf_score": 0.05948704357382231,
+          "matched_child_ids": [
+            "titan_reranking_spec.md::parent-0000::child-0000",
+            "titan_reranking_spec.md::parent-0000::child-0001"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "rare-part-number",
+      "query": "For part PART-NX-4407, what cache and indexing approach gives high read throughput?",
+      "tags": [
+        "hybrid",
+        "exact-keyword"
+      ],
+      "relevant_sources": [
+        "platform_parts_catalog.md"
+      ],
+      "ranked_sources": [
+        "platform_parts_catalog.md",
+        "titan_security_whitepaper.md",
+        "titan_vector_architecture.md"
+      ],
+      "ranked_parent_ids": [
+        "platform_parts_catalog.md::parent-0000",
+        "titan_security_whitepaper.md::parent-0000",
+        "titan_vector_architecture.md::parent-0000"
+      ],
+      "hit_rate_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_latency_ms": 108.853,
+      "context_token_count": 634,
+      "context_token_budget": 1500,
+      "context_sources": [
+        "platform_parts_catalog.md",
+        "platform_parts_catalog.md",
+        "titan_security_whitepaper.md",
+        "platform_parts_catalog.md",
+        "titan_vector_architecture.md"
+      ],
+      "omitted_parent_ids": [],
+      "retrieval_stats": {
+        "latency_ms": 108.795,
+        "dense_candidates": 20,
+        "sparse_candidates": 20,
+        "fused_child_candidates": 20,
+        "fused_unique_children_before_cap": 20,
+        "metadata_filter": null,
+        "unique_parent_candidates": 17,
+        "returned_parents": 5
+      },
+      "reranked": [
+        {
+          "parent_id": "platform_parts_catalog.md::parent-0000",
+          "source": "platform_parts_catalog.md",
+          "score": 6.594520568847656,
+          "rrf_score": 0.03278688524590164,
+          "matched_child_ids": [
+            "platform_parts_catalog.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "platform_parts_catalog.md::parent-0002",
+          "source": "platform_parts_catalog.md",
+          "score": 3.6877925395965576,
+          "rrf_score": 0.03225806451612903,
+          "matched_child_ids": [
+            "platform_parts_catalog.md::parent-0002::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_security_whitepaper.md::parent-0000",
+          "source": "titan_security_whitepaper.md",
+          "score": -8.270771026611328,
+          "rrf_score": 0.029957522915269395,
+          "matched_child_ids": [
+            "titan_security_whitepaper.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "platform_parts_catalog.md::parent-0001",
+          "source": "platform_parts_catalog.md",
+          "score": -9.975351333618164,
+          "rrf_score": 0.031009615384615385,
+          "matched_child_ids": [
+            "platform_parts_catalog.md::parent-0001::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_vector_architecture.md::parent-0000",
+          "source": "titan_vector_architecture.md",
+          "score": -10.434412002563477,
+          "rrf_score": 0.06073403806678455,
+          "matched_child_ids": [
+            "titan_vector_architecture.md::parent-0000::child-0001",
+            "titan_vector_architecture.md::parent-0000::child-0000"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "retention-policy",
+      "query": "When can archived audit logs be purged, and what approval is required?",
+      "tags": [
+        "structural",
+        "metadata"
+      ],
+      "relevant_sources": [
+        "enterprise_retention_policy.md"
+      ],
+      "ranked_sources": [
+        "enterprise_retention_policy.md",
+        "titan_security_whitepaper.md",
+        "platform_parts_catalog.md",
+        "structural_code_sample.md",
+        "titan_client_implementation.md"
+      ],
+      "ranked_parent_ids": [
+        "enterprise_retention_policy.md::parent-0000",
+        "titan_security_whitepaper.md::parent-0002",
+        "platform_parts_catalog.md::parent-0002",
+        "structural_code_sample.md::parent-0001",
+        "titan_client_implementation.md::parent-0002"
+      ],
+      "hit_rate_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_latency_ms": 95.24,
+      "context_token_count": 1009,
+      "context_token_budget": 1500,
+      "context_sources": [
+        "enterprise_retention_policy.md",
+        "titan_security_whitepaper.md",
+        "platform_parts_catalog.md",
+        "structural_code_sample.md",
+        "titan_client_implementation.md"
+      ],
+      "omitted_parent_ids": [],
+      "retrieval_stats": {
+        "latency_ms": 95.187,
+        "dense_candidates": 20,
+        "sparse_candidates": 20,
+        "fused_child_candidates": 20,
+        "fused_unique_children_before_cap": 20,
+        "metadata_filter": null,
+        "unique_parent_candidates": 17,
+        "returned_parents": 5
+      },
+      "reranked": [
+        {
+          "parent_id": "enterprise_retention_policy.md::parent-0000",
+          "source": "enterprise_retention_policy.md",
+          "score": 5.715620517730713,
+          "rrf_score": 0.06384129063829452,
+          "matched_child_ids": [
+            "enterprise_retention_policy.md::parent-0000::child-0000",
+            "enterprise_retention_policy.md::parent-0000::child-0001"
+          ]
+        },
+        {
+          "parent_id": "titan_security_whitepaper.md::parent-0002",
+          "source": "titan_security_whitepaper.md",
+          "score": -9.180119514465332,
+          "rrf_score": 0.030330882352941176,
+          "matched_child_ids": [
+            "titan_security_whitepaper.md::parent-0002::child-0000"
+          ]
+        },
+        {
+          "parent_id": "platform_parts_catalog.md::parent-0002",
+          "source": "platform_parts_catalog.md",
+          "score": -10.318329811096191,
+          "rrf_score": 0.030158730158730156,
+          "matched_child_ids": [
+            "platform_parts_catalog.md::parent-0002::child-0000"
+          ]
+        },
+        {
+          "parent_id": "structural_code_sample.md::parent-0001",
+          "source": "structural_code_sample.md",
+          "score": -10.972832679748535,
+          "rrf_score": 0.02878726010616578,
+          "matched_child_ids": [
+            "structural_code_sample.md::parent-0001::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_client_implementation.md::parent-0002",
+          "source": "titan_client_implementation.md",
+          "score": -10.981951713562012,
+          "rrf_score": 0.028814262023217248,
+          "matched_child_ids": [
+            "titan_client_implementation.md::parent-0002::child-0000"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "client-retry-code",
+      "query": "Which client function retries failed retrieval requests with exponential backoff?",
+      "tags": [
+        "code",
+        "structural"
+      ],
+      "relevant_sources": [
+        "titan_client_implementation.md"
+      ],
+      "ranked_sources": [
+        "titan_client_implementation.md",
+        "titan_reranking_spec.md",
+        "structural_code_sample.md"
+      ],
+      "ranked_parent_ids": [
+        "titan_client_implementation.md::parent-0000",
+        "titan_reranking_spec.md::parent-0000",
+        "structural_code_sample.md::parent-0001"
+      ],
+      "hit_rate_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "retrieval_latency_ms": 96.848,
+      "context_token_count": 1151,
+      "context_token_budget": 1500,
+      "context_sources": [
+        "titan_client_implementation.md",
+        "titan_client_implementation.md",
+        "titan_reranking_spec.md",
+        "structural_code_sample.md",
+        "titan_client_implementation.md"
+      ],
+      "omitted_parent_ids": [],
+      "retrieval_stats": {
+        "latency_ms": 96.794,
+        "dense_candidates": 20,
+        "sparse_candidates": 20,
+        "fused_child_candidates": 20,
+        "fused_unique_children_before_cap": 20,
+        "metadata_filter": null,
+        "unique_parent_candidates": 17,
+        "returned_parents": 5
+      },
+      "reranked": [
+        {
+          "parent_id": "titan_client_implementation.md::parent-0000",
+          "source": "titan_client_implementation.md",
+          "score": 8.45541763305664,
+          "rrf_score": 0.03278688524590164,
+          "matched_child_ids": [
+            "titan_client_implementation.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_client_implementation.md::parent-0001",
+          "source": "titan_client_implementation.md",
+          "score": 3.1139233112335205,
+          "rrf_score": 0.03225806451612903,
+          "matched_child_ids": [
+            "titan_client_implementation.md::parent-0001::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_reranking_spec.md::parent-0000",
+          "source": "titan_reranking_spec.md",
+          "score": -6.717067718505859,
+          "rrf_score": 0.056235405461411654,
+          "matched_child_ids": [
+            "titan_reranking_spec.md::parent-0000::child-0001",
+            "titan_reranking_spec.md::parent-0000::child-0000"
+          ]
+        },
+        {
+          "parent_id": "structural_code_sample.md::parent-0001",
+          "source": "structural_code_sample.md",
+          "score": -7.605216026306152,
+          "rrf_score": 0.029571646010002173,
+          "matched_child_ids": [
+            "structural_code_sample.md::parent-0001::child-0000"
+          ]
+        },
+        {
+          "parent_id": "titan_client_implementation.md::parent-0002",
+          "source": "titan_client_implementation.md",
+          "score": -8.014262199401855,
+          "rrf_score": 0.029206349206349208,
+          "matched_child_ids": [
+            "titan_client_implementation.md::parent-0002::child-0000"
+          ]
+        }
+      ]
+    }
+  ],
+  "project": "Advanced RAG Context",
+  "config": {
+    "parent_max_tokens": 512,
+    "child_max_tokens": 120,
+    "child_overlap_tokens": 20,
+    "dense_top_k": 50,
+    "sparse_top_k": 50,
+    "rerank_top_n": 5,
+    "rrf_k": 60,
+    "context_token_budget": 1500,
+    "semantic_chunking": true
+  },
+  "corpus_directory": "/kaggle/working/rag-context-system/data/sample_corpus",
+  "models": {
+    "embedding": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "answer_generation": "optional; not loaded by retrieval evaluation"
+  },
+  "ingestion": {
+    "source_documents": 7,
+    "parent_chunks": 17,
+    "child_chunks": 20,
+    "tokenizer": "tiktoken:cl100k_base",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  },
+  "hybrid_synergy_probe": {
+    "query": "For part PART-NX-4407, what cache and indexing approach gives high read throughput?",
+    "expected_source": "platform_parts_catalog.md",
+    "dense_rank": 1,
+    "bm25_rank": 1,
+    "rrf_child_rank": 1,
+    "bm25_found_exact_part_source": true,
+    "note": "Dense embeddings may also retrieve exact identifiers; this probe verifies BM25 and RRF preserve the lexical match."
+  },
+  "reranking_probe": {
+    "query": "What encryption and authentication standards protect Project Titan data?",
+    "candidate_count": 20,
+    "expected_top_parent": "probe-security",
+    "relevant_candidate_rank": 1,
+    "passed": true,
+    "top_five": [
+      {
+        "id": "probe-security",
+        "score": 7.308618068695068
+      },
+      {
+        "id": "probe-distractor-18",
+        "score": -11.076347351074219
+      },
+      {
+        "id": "probe-distractor-08",
+        "score": -11.086466789245605
+      },
+      {
+        "id": "probe-distractor-13",
+        "score": -11.091367721557617
+      },
+      {
+        "id": "probe-distractor-03",
+        "score": -11.097023963928223
+      }
+    ],
+    "note": "Cross-encoder scores are relevance signals, not probabilities of truth."
+  }
+}

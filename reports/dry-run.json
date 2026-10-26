@@ -1,0 +1,13 @@
+{
+  "source_documents_loaded": 7,
+  "parent_chunks_created": 12,
+  "child_chunks_created": 17,
+  "child_parent_mapping_valid": true,
+  "parent_token_count_ge_child": true,
+  "all_parent_chunks_within_hard_cap": true,
+  "all_child_chunks_within_hard_cap": true,
+  "fenced_code_blocks_preserved_intact": true,
+  "tokenizer_mode": "tiktoken:cl100k_base",
+  "failed_checks": [],
+  "passed": true
+}
